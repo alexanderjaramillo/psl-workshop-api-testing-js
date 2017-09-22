@@ -1,0 +1,28 @@
+{
+  "name": "psl-workshop-api-testing-js",
+  "version": "1.0.0",
+  "description": "This is a Workshop about API Testing in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderjaramillo/psl-workshop-api-testing-js.git"
+  },
+  "keywords": [
+    "api-testing",
+    "dojo",
+    "practice"
+  ],
+  "author": "Alexander Jaramillo - john.jara@gmail.com alexanderjaramillo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexanderjaramillo/psl-workshop-api-testing-js/issues"
+  },
+  "homepage": "https://github.com/alexanderjaramillo/psl-workshop-api-testing-js#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}
