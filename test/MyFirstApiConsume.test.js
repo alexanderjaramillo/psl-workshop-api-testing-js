@@ -4,6 +4,7 @@ const chai = require ( 'chai' );
 const expect = chai.expect;
 
 describe( 'First Api Tests' , () => {
+
     it( 'Consume GET Service' , () => {
         return agent.get( 'https://httpbin.org/ip' ).then((response) => {
         expect(response.status).to.equal(statusCode.OK);
@@ -24,6 +25,7 @@ describe( 'First Api Tests' , () => {
         expect(response.body.args).to.eql(query);
         });
     });
+
     it( 'Consume POST Service' , () => {
         const body = {
         name: 'John' ,
@@ -38,6 +40,7 @@ describe( 'First Api Tests' , () => {
         expect(response.body.json).to.eql(body);
         });
     });
+
     it( 'Consume PATCH Service' , () => {
         const data = 'DataTestPatch';
         return agent
@@ -48,6 +51,7 @@ describe( 'First Api Tests' , () => {
         expect(response.data).to.equal(response.data);
         });
     });
+
     it( 'Consume HEAD Service' , () => {
         return agent
         .head( 'https://httpbin.org/headers' ).then((response) => {
@@ -55,6 +59,7 @@ describe( 'First Api Tests' , () => {
             expect(response.length).to.equal(undefined);
         });
     });
+
     it( 'Consume PUT Service' , () => {
         const body = {
         name: 'John' ,
@@ -69,6 +74,7 @@ describe( 'First Api Tests' , () => {
         expect(response.body.json).to.eql(body);
         });
     });
+    
     it( 'Consume DELETE Service' , () => {
         return agent
         .del( 'https://httpbin.org/delete' ).then((response) => {
