@@ -9,18 +9,18 @@ const repository = 'psl-workshop-api-testing-js';
 describe('Github Api Test', () => {
   describe('Authentication', () => {
     it('Via OAuth2 Tokens by Header', () =>
-      agent.get(` ${urlBase} /repos/ ${githubUserName} / ${repository} `)
+      agent.get(`${urlBase}/repos/${githubUserName}/${repository}`)
         .auth('token', process.env.ACCESS_TOKEN)
         .then((response) => {
           expect(response.status).to.equal(statusCode.OK);
-          expect(response.body.description).equal('This is a Workshop about Api Testing in JavaScript');
+          expect(response.body.description).equal('Repositorio para practica de NodeJS');
         }));
     it('Via OAuth2 Tokens by parameter', () =>
-      agent.get(` ${urlBase} /repos/ ${githubUserName} / ${repository} `)
-        .query(`access_token= ${process.env.ACCESS_TOKEN} `)
+      agent.get(`${urlBase}/repos/${githubUserName}/${repository}`)
+        .query(`access_token=${process.env.ACCESS_TOKEN}`)
         .then((response) => {
           expect(response.status).to.equal(statusCode.OK);
-          expect(response.body.description).equal('This is a Workshop about Api Testing in JavaScript');
+          expect(response.body.description).equal('Repositorio para practica de NodeJS');
         }));
   });
 });
