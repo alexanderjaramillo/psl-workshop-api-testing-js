@@ -4,8 +4,8 @@
   "description": "This is a Workshop about API Testing in Javascript",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && mocha -t 5000 --reporter mochawesome --reporter-options reportDir=report,reportFilename=ApiTesting",
-    "lint" : "eslint ./test/**/*.js"
+    "test": "npm run lint && cross-env ACCESS_TOKEN=d2be71455790de2c932922a92699b33ccdcf99cb mocha -t 5000 --reporter mochawesome --reporter-options reportDir=report,reportFilename=ApiTesting",
+    "lint": "eslint ./test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -23,14 +23,15 @@
   },
   "homepage": "https://github.com/alexanderjaramillo/psl-workshop-api-testing-js#readme",
   "dependencies": {
-    "superagent": "^3.6.0",
-    "superagent-promise": "^1.1.0",
     "chai": "^4.1.2",
+    "cross-env": "^5.0.5",
     "eslint": "^4.7.2",
     "eslint-config-airbnb-base": "^12.0.0",
     "eslint-plugin-import": "^2.7.0",
     "http-status-codes": "^1.3.0",
     "mocha": "^3.5.3",
-    "mochawesome": "^2.3.1"
+    "mochawesome": "^2.3.1",
+    "superagent": "^3.6.0",
+    "superagent-promise": "^1.1.0"
   }
 }
